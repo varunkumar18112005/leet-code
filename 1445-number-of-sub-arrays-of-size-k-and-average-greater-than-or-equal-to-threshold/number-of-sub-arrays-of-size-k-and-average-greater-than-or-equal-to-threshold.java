@@ -3,10 +3,11 @@ class Solution {
         int count=0;
         int sum=0;
         int left=0;
+        int target=threshold*k;
         for(int i=0;i<arr.length;i++){
             sum+=arr[i];
             if(i-left+1==k){
-                if(sum/k>=threshold){
+                if(sum>=target){
                     count++;
                 }
                 sum-=arr[left];
